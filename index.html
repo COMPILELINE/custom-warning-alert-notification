@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Custom Warning Alert Notification</title>
+</head>
+<body>
+    <div class="wrapper">
+        <span>!</span>
+        <p>Warning : this is a alert!</p>
+        <button class="closebtn">X</button>
+    </div>
+    <button class="show">Show Alert</button>
+    <script>
+        const closebtn = document.querySelector('.closebtn')
+        const showalert = document.querySelector('.show')
+        closebtn.addEventListener('click' , () => {
+            document.querySelector('.wrapper').classList.remove('showalert')
+        })
+        showalert.addEventListener('click',() => {
+            document.querySelector('.wrapper').classList.toggle('showalert')
+        })
+        setInterval(() => {
+            document.querySelector('.wrapper').classList.remove('showalert')
+        }, 5000)
+    </script>
+</body>
+</html>
